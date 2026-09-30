@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+
+# Old WordPress URLs that may be bookmarked or indexed
+[[redirects]]
+  from = "/wp-admin/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/wp-login.php"
+  to = "/"
+  status = 301
