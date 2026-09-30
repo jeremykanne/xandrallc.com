@@ -1,7 +1,16 @@
 [build]
-  publish = "."
+  publish = "site"
 
-# Old WordPress URLs that may be bookmarked or indexed
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 [[redirects]]
   from = "/wp-admin/*"
   to = "/"
